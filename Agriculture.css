@@ -1,0 +1,367 @@
+/* head section */
+#head{
+    background-color: rgb(215, 244, 215);
+}
+#logo{
+    font-size: 35px;
+    color: rgb(9, 72, 4);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+i.fa-sol{
+    color: rgb(9, 72, 4);
+    font-size: 20px;
+}
+#header{
+    background-color: rgb(9, 72, 4);
+}
+.nhead:hover{
+    background-color:rgb(90, 177, 83) ;
+}
+/* inner first part */
+#farm_first{
+    background-color:rgb(90, 177, 83);
+    padding-bottom: 40px;
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(9, 72, 4);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.text{
+    height: 45px;
+}
+/* slideshow container */
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+}
+/* third part */
+#third_part{
+    background-color:rgb(139, 197, 134) ;
+    padding-bottom: 30px;
+    padding-top: 35px;
+    text-align: center;
+}
+.third{
+    padding-top: 30px;
+}
+.section h2.farm::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color:  rgb(9, 72, 4);
+    margin: 15px auto;
+}
+/* fourth part */
+#fourth_part{
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+.forth{
+    text-align: end;
+}
+.farm_second{
+    padding-top: 40px;
+    padding-bottom: 35px;
+}
+#farm_third{
+    padding-bottom: 40px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fourth{
+    padding-top: 30px;
+}
+.section h2.farmi::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color:  rgb(9, 72, 4);
+    margin: 10px;
+}
+.btne a{
+    text-decoration: none;
+    color: white;
+}
+.btne a:hover{
+    color: rgb(3, 23, 1);
+}
+.btne{
+    background-color: rgb(9, 72, 4);
+}
+.btne:hover{
+    background-color: rgb(139, 197, 134);
+    border: 2px solid rgb(9, 72, 4);
+}
+.krish{
+    text-align: center;
+    height: 430px;
+}
+@media(min-width:767.33px) and (max-width:991.33px){
+    .krish{
+        height: 480px;
+    }
+}
+@media(min-width:575.33px) and (max-width:767.33px ){
+    .krish{
+        height: 450px;
+    }
+}
+@media(min-width:0px) and (max-width:575.33px){
+    .krish{
+        height: 400px;
+        margin-bottom: 20px;
+    }
+}
+.size{
+    color: rgb(9, 72, 4);
+}
+.farming img {
+    height: 200px;
+    transition: opacity 0.3s ease-in-out;
+}
+.farming:hover img {
+     opacity: 0;
+}
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(20%, 0%);
+    height: 200px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+@media(min-width:767.33px) and (max-width:991.33px){
+    .hover-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+        height: 200px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+@media(min-width:575.33px) and (max-width:767.33px ){
+    .hover-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(13%, 0%);
+        height: 200px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+@media(min-width:0px) and (max-width:575.33px){
+    .hover-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(68%, 0%);
+        height: 200px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+.farming:hover .hover-image {
+    opacity: 1;
+}  
+.discount-card {
+    position: relative;
+}
+.discount-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:red; 
+    color: #fff;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+.farming:hover .discount-badge {
+    opacity: 0;
+} 
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    transition: background-color 0.3s ease-in-out;
+}
+.cartbt{
+    background-color:rgb(9, 72, 4);
+    color: white;
+}
+.cartbt:hover{
+    background-color: white;
+    color: rgb(9, 72, 4);
+    border: 2px solid rgb(9, 72, 4);
+}
+.buybt{
+   background-color: rgb(255, 204, 0);
+   color: rgb(9, 72, 4);
+}
+.buybt:hover{
+    background-color: white;
+    color: rgb(255, 204, 0);
+    border: 2px solid rgb(255, 204, 0);
+}
+.btn-add-to-cart,
+.btn-buy-now {
+    width: 48%; 
+}
+.original-price {
+    text-decoration: line-through;
+}
+.discounted-price {
+    color: rgb(9, 72, 4); 
+}
+#fifth_part{
+    background-color: rgb(47, 139, 84);
+    padding-bottom: 20px;
+    padding-top: 25px;
+}
+#sixth_part{
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+#seventh_part{
+    background-color:rgb(139, 197, 134) ;
+    padding-bottom: 30px;
+    padding-top: 35px;
+    text-align: center;
+}
+#eighth_part{
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+#ninth_part{
+    background-color:rgb(47, 139, 84);
+    padding-bottom: 30px;
+    padding-top: 35px;
+    text-align: center;
+}
+.freeimg{
+    height: 250px;
+}
+#tenth_part{
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+#eleventh_part{
+    background-color:rgb(139, 197, 134);
+    padding-bottom: 30px;
+    padding-top: 35px;
+    text-align: center;
+}
+#twelfth_part{
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+.image-container {
+    position: relative;
+    text-align: left;
+}
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color:rgb(9, 72, 4);
+    font-size: 24px; 
+    font-weight: bold;
+}
+.krishii{
+    text-align: center;
+    height: 450px;
+}
+@media(min-width:575.33px) and (max-width:767.33px ){
+    .krishii{
+        height: 450px;
+    }
+}
+@media(min-width:0px) and (max-width:575.33px){
+    .krishii{
+        height: 570px;
+        margin-bottom: 20px;
+    }
+}
+#fourteen_part{
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+.farming_two img {
+    transition: transform 0.3s ease-in-out;
+}
+.farming_two:hover img {
+    transform: scale(1.1);
+}
+.farming_two:hover .discount-badge {
+    opacity: 0;
+}
+#fifteen_part{
+    background-color:rgb(47, 139, 84);
+    padding-bottom: 30px;
+    padding-top: 35px;
+    text-align: center;
+}
+#sixteen_part{
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+#seventeen_part{
+    background-color:rgb(139, 197, 134);
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+@media(min-width:0px) and (max-width:575.33px){
+    #seventeen_part{
+        text-align: center;
+    }
+    .ferm{
+        text-align: center;
+    }
+}
+.farming_three:hover{
+    border: 3px solid rgb(23, 108, 58);
+}
+#footer{
+    background-color:rgb(1, 8, 0) ;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+.foot_top{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+li{
+    list-style: none;
+}
+li:hover{
+    color:rgb(90, 235, 90) ;
+}
+.fa-brands:hover{
+    color:rgb(90, 235, 90) ;
+}
+.section h3.farm::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color:  white;
+    margin: 10px;
+}
+.foot_one{
+    padding-top: 25px;
+}
+.foot{
+    text-align: end;
+    font-size: 40px;
+}
+span.color:hover{
+    color:rgb(90, 235, 90) ;
+}

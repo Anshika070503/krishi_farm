@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi_Farm</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Agriculture.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="cart.js"></script> -->
+    <script>
+        function addToCart() {
+            // Extract product information
+            var productName = document.querySelector('#product-info h6').innerText;
+            var productBrand = document.querySelector('#product-info .form=text').innerText;
+            var productPrice = document.querySelector('#product-info .discounted-price').innerText;
+    
+            // Create an object with product details
+            var product = {
+                name: productName,
+                brand: productBrand,
+                price: productPrice
+            };
+    
+            // Retrieve existing cart items from localStorage or initialize an empty array
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            // Add the product to the cart
+            cartItems.push(product);
+    
+            // Store the updated cart items back to localStorage
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+    
+            alert('Product added to cart successfully!');               
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid sticky-top">
+        <div class="row">
+            <div id="head">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#" id="logo">
+                    <img src="farm_logo.png" alt="Logo" width="65" height="55" class="d-inline-block align-text-center">
+                     Krishi Farm
+                    </a>
+                    <div class="navbar-collapse me-2 justify-content-md-center">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <div class="navbar">
+                        <a class="nav-link mx-3" href="login.html"><i class="fa-solid fa-user fa-sol"></i> Login</a>
+                    <a class="nav-link mx-3" href="cart.html"><i class="fa-solid fa-cart-shopping fa-sol"></i> Cart</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div id="header">
+                <nav class="navbar navbar-expand-md">
+                    <a class="navbar-brand mx-lg-4" href="#">SERVICES</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item nhead">
+                            <a class="nav-link mx-lg-4" href="Index.html#twelfth_part">SEEDS</a>
+                            </li>
+                            <li class="nav-item nhead">
+                            <a class="nav-link mx-lg-4" href="Index.html#eighth_part">FERTILIZERS</a>
+                            </li>
+                            <li class="nav-item nhead">
+                            <a class="nav-link mx-lg-4" href="Index.html#fourth_part">INSECTICIDES</a>
+                            </li>
+                            <li class="nav-item nhead">
+                            <a class="nav-link mx-lg-4" href="Index.html#sixth_part">FUNGICIDES</a>
+                            </li>
+                            <li class="nav-item nhead">
+                            <a class="nav-link mx-lg-4" href="Index.html#tenth_part">BIOPRODUCTS</a>
+                            </li>
+                            <li class="nav-item nhead">
+                            <a class="nav-link mx-lg-4" href="Index.html#fourteen_part">IMPLEMENTS</a>
+                            </li>
+                            <li class="nav-item nhead">
+                            <a class="nav-link mx-lg-4" href="Index.html#sixteen_part">HERBICIDES</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div id="second_part">
+        <div class="container-fluid">
+            <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-speed="400">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="farm_top5.png" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="farm_top2.webp" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="farm_top4.jpg" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="farm_top1.webp" class="d-block w-100" alt="Slide 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="farm_top3.webp" class="d-block w-100" alt="Slide 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="farm_top6.png" class="d-block w-100" alt="Slide 6">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="third_part" class="section">
+        <div class="container">
+            <div class="row">
+                <h2 class="farm">Trending on Krishi Farm!</h2>
+            </div>
+            <div class="row third">
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><a href="Index.html#fourteen_part"><img src="farm_th1.png" class="img-fluid" width="260px" height="400px"></a></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><a href="Index.html#twelfth_part"><img src="farm_th2.png" class="img-fluid" width="260px" height="400px"></a></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><a href="Index.html#sixteen_part"><img src="farm_th3.png" class="img-fluid" width="260px" height="400px"></a></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><a href="Index.html#sixteen_part"><img src="farm_th4.png" class="img-fluid" width="260px" height="400px"></a></div>
+            </div>
+        </div>
+    </div>
+    <div id="fourth_part" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><h2 class="farmi">Insecticides</h2></div>
+                <div class="col-6 forth"><button class="btn btne"><a href="Insecticides.html">VIEW ALL</a></button></div>
+            </div>
+            <div class="row fourth">
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">5% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Coragen_2.png?crop=center&height=940&v=1679921600&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Coragen.png?v=1679921600" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">10 ml</span>
+                            <h6>CORAGEN INSECTICIDE</h6>
+                            <span class="form=text text-muted">FMC</span> <br>
+                            <span class="discounted-price"><b>&#8377;210</b></span> <span class="original-price"><b>&#8377;220</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming" id="product-info">
+                            <span class="badge badge-danger discount-badge">50% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Gracia_3.png?crop=center&height=940&v=1679921631&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Gracia.png?crop=center&height=940&v=1679921631&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">160 ml</span>
+                            <h6>GRACIA INSECTICIDE</h6>
+                            <span class="form=text text-muted">Godrej</span> <br>
+                            <span class="discounted-price"><b>&#8377;1210</b></span> <span class="original-price"><b>&#8377;2420</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">10% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Solomon_2.png?crop=center&height=940&v=1677908912&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Solomon.png?crop=center&height=940&v=1677908907&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">100 ml</span>
+                            <h6>SOLOMON INSECTICIDE</h6>
+                            <span class="form=text text-muted">Bayer</span> <br>
+                            <span class="discounted-price"><b>&#8377;312.30</b></span> <span class="original-price"><b>&#8377;347</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">27% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Exponus_1.png?crop=center&height=940&v=1676011165&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Exponus.png?crop=center&height=350&v=1676011165&width=350" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">34 ml</span>
+                            <h6>EXPONUS INSECTICIDE</h6>
+                            <span class="form=text text-muted">BASF</span> <br>
+                            <span class="discounted-price"><b>&#8377;1736</b></span> <span class="original-price"><b>&#8377;2363</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fifth_part">
+        <div class="container">
+            <img src="farm1.png" class="img-fluid" width="100%">
+        </div>
+    </div>
+    <div id="sixth_part" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><h2 class="farmi">Fungicides</h2></div>
+                <div class="col-6 forth"><button class="btn btne"><a href="Fungicides.html">VIEW ALL</a></button></div>
+            </div>
+            <div class="row fourth">
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">11% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Saaf_2.png?crop=center&height=940&v=1679921658&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Saaf.png?crop=center&height=940&v=1679921658&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">100 GMS</span>
+                            <h6>SAAF FUNGICIDE</h6>
+                            <span class="form=text text-muted">UPL</span> <br>
+                            <span class="discounted-price"><b>&#8377;99</b></span> <span class="original-price"><b>&#8377;111</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">23% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/Luna-Exp.png?crop=center&height=940&v=1689079719&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Luna-Experience.png?v=1689079719" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">250 ml</span>
+                            <h6>LUNA EXPERIENCE FUNGICIDE</h6>
+                            <span class="form=text text-muted">Bayer</span> <br>
+                            <span class="discounted-price"><b>&#8377;1600</b></span> <span class="original-price"><b>&#8377;2080</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">20% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Cabrio-Top-02.png?crop=center&height=350&v=1674478299&width=350" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Cabrio-Top-01.png?crop=center&height=350&v=1674478299&width=350" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">300 gm</span>
+                            <h6>CABRIO TOP FUNGICIDE</h6>
+                            <span class="form=text text-muted">BASF</span> <br>
+                            <span class="discounted-price"><b>&#8377;759</b></span> <span class="original-price"><b>&#8377;945</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">14% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/RidomilGold_3.png?crop=center&height=940&v=1678530443&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Ridomilgold.png?crop=center&height=940&v=1678530443&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">100 gm</span>
+                            <h6>RIDOMIL GOLD FUNGICIDE</h6>
+                            <span class="form=text text-muted">Syngenta</span> <br>
+                            <span class="discounted-price"><b>&#8377;231</b></span> <span class="original-price"><b>&#8377;269</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="seventh_part"  class="section">
+        <div class="container">
+            <div class="row">
+                <h2 class="farm">Exclusive</h2>
+            </div>
+            <div class="row third">
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-4"><a href="Index.html#sixteen_part"><img src="farm_part1.webp" class="img-fluid" width="260px" height="300px"></a></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-4"><a href="Index.html#sixteen_part"><img src="farm_part2.webp" class="img-fluid" width="260px" height="300px"></a></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-4"><a href="Index.html#sixteen_part"><img src="farm_part3.webp" class="img-fluid" width="260px" height="300px"></a></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-4"><a href="Index.html#sixteen_part"><img src="farm_part4.webp" class="img-fluid" width="260px" height="300px"></a></div>
+            </div>
+        </div>
+    </div>
+    <div id="eighth_part" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><h2 class="farmi">Fertilizers</h2></div>
+                <div class="col-6 forth"><button class="btn btne"><a href="Fertilizer.html">VIEW ALL</a></button></div>
+            </div>
+            <div class="row fourth">
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">10% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Molybdenum2.png?crop=center&height=940&v=1677582854&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Molybdenum-146.png?crop=center&height=940&v=1677582854&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">100 GMS</span>
+                            <h6>MULTIPLEX MOLYBDENUM</h6>
+                            <span class="form=text text-muted">Multiplex</span> <br>
+                            <span class="discounted-price"><b>&#8377;840</b></span> <span class="original-price"><b>&#8377;850</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">3% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/FlowerBooster-37-37.png?crop=center&height=940&v=1677822800&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/FlowerBooster_l.png?crop=center&height=940&v=1691123462&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">500 gm</span>
+                            <h6>MULTIPLEX FLOWER BOOSTER</h6>
+                            <span class="form=text text-muted">Multiplex</span> <br>
+                            <span class="discounted-price"><b>&#8377;184</b></span> <span class="original-price"><b>&#8377;190</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">35% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/isabion_4b38f885-0724-4633-93c4-058d96cee6e4.png?crop=center&height=940&v=1678448291&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Isabion.png?crop=center&height=940&v=1678448287&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">100 ml</span>
+                            <h6>ISABION GROWTH PROMOTER</h6>
+                            <span class="form=text text-muted">Syngenta</span> <br>
+                            <span class="discounted-price"><b>&#8377;169</b></span> <span class="original-price"><b>&#8377;259</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">13% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Karnthi-15.png?crop=center&height=940&v=1691123798&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Kranti.png?crop=center&height=940&v=1691123798&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">100 ml</span>
+                            <h6>KRANTI MICRONUTRIENT</h6>
+                            <span class="form=text text-muted">Multiplex</span> <br>
+                            <span class="discounted-price"><b>&#8377;130</b></span> <span class="original-price"><b>&#8377;150</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ninth_part">
+        <div class="container">
+            <div class="row third">
+                <div class="col-lg-4 col-md-6 mr-md-5 mb-4"><img src="farm_part5.webp" class="img-fluid freeimg" width="350px"></div>
+                <div class="col-lg-4 col-md-6 mr-md-5 mb-4"><img src="farm_part6.webp" class="img-fluid freeimg" width="350px"></div>
+                <div class="col-lg-4 col-md-6 mr-md-5 mb-4"><img src="farm_part9.png" class="img-fluid freeimg" width="350px"></div>
+            </div>
+        </div>
+    </div>
+    <div id="tenth_part" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><h2 class="farmi">Bio-Products</h2></div>
+                <div class="col-6 forth"><button class="btn btne"><a href="Bioproduct.html">VIEW ALL</a></button></div>
+            </div>
+            <div class="row fourth">
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">8% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/nisarga-power-11.png?crop=center&height=940&v=1691129890&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Nisarga_p.png?crop=center&height=940&v=1691129890&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">1 kg</span>
+                            <h6>NISARGA BIO POWDER</h6>
+                            <span class="form=text text-muted">Multiplex</span> <br>
+                            <span class="discounted-price"><b>&#8377;220</b></span> <span class="original-price"><b>&#8377;240</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">30% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Soldier-14.png?crop=center&height=940&v=1691132144&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/EPN-Soldier.png?crop=center&height=940&v=1691132144&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">300 gm</span>
+                            <h6>SOLDIER(EPN)</h6>
+                            <span class="form=text text-muted">Multiplex</span> <br>
+                            <span class="discounted-price"><b>&#8377;219</b></span> <span class="original-price"><b>&#8377;315</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">33% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Varsha_2.png?crop=center&height=940&v=1691133719&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Varsha.png?crop=center&height=940&v=1677583011&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">1 kg</span>
+                            <h6>MULTIPLEX VARSHA PESTICIDE</h6>
+                            <span class="form=text text-muted">Multiplex</span> <br>
+                            <span class="discounted-price"><b>&#8377;162</b></span> <span class="original-price"><b>&#8377;240</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">35% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Jivras-18.png?crop=center&height=940&v=1691123695&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Jivras_1.png?crop=center&height=350&v=1691123695&width=350" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">500 ml</span>
+                            <h6>JIVRAS HUMIC ACID</h6>
+                            <span class="form=text text-muted">Multiplex</span> <br>
+                            <span class="discounted-price"><b>&#8377;280</b></span> <span class="original-price"><b>&#8377;430</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="eleventh_part" class="section">
+        <div class="container">
+            <div class="row">
+                <h2 class="farm">New Season!</h2>
+            </div>
+            <div class="row third">
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><img src="farm_th8.png" class="img-fluid" width="260px" height="300px"></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><img src="farm_th7.png" class="img-fluid" width="260px" height="300px"></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><img src="farm_th6.png" class="img-fluid" width="260px" height="300px"></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><img src="farm_th5.png" class="img-fluid" width="260px" height="300px"></div>
+            </div>
+        </div>
+    </div>
+    <div id="twelfth_part" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><h2 class="farmi">Seeds</h2></div>
+                <div class="col-6 forth"><button class="btn btne"><a href="Seed.html">VIEW ALL</a></button></div>
+            </div>
+            <div class="row fourth">
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">21% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/Seminis-Moraleda-Beans.png?crop=center&height=940&v=1689139375&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/MORALEDA-BEANS.png?crop=center&height=350&v=1689139375&width=350" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">500 gm</span>
+                            <h6>MORALEDA BEANS</h6>
+                            <span class="form=text text-muted">Seminis</span> <br>
+                            <span class="discounted-price"><b>&#8377;1149</b></span> <span class="original-price"><b>&#8377;1450</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">23% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Saaho_4.png?crop=center&height=940&v=1677908632&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/1-03.png?crop=center&height=940&v=1677908632&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">3500 seeds</span>
+                            <h6>SAAHO TOMATO SEEDS</h6>
+                            <span class="form=text text-muted">Syngenta</span> <br>
+                            <span class="discounted-price"><b>&#8377;1065</b></span> <span class="original-price"><b>&#8377;1380</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">20% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/Seminis-Malini-Cucumber--800-SEEDS.png?crop=center&height=940&v=1689397009&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/MALINI-CUCUMBER.png?crop=center&height=350&v=1689397009&width=350" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">800 seeds</span>
+                            <h6>MALINI CUCUMBER SEEDS</h6>
+                            <span class="form=text text-muted">Seminis</span> <br>
+                            <span class="discounted-price"><b>&#8377;595</b></span> <span class="original-price"><b>&#8377;740</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">18% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/Syngenta-1522-CFL-Cauliflower-Seeds.png?crop=center&height=940&v=1689140385&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/CFL-1522.png?crop=center&height=350&v=1689140385&width=350" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">2000 seeds</span>
+                            <h6>CFL-1522 CAULIFLOWER SEEDS</h6>
+                            <span class="form=text text-muted">Syngenta</span> <br>
+                            <span class="discounted-price"><b>&#8377;744</b></span> <span class="original-price"><b>&#8377;910</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="thirteen_part" class="section">
+        <div class="container-fluid thirteen">
+            <div class="image-container">
+                <img src="farm_part10.png" alt="Original Image" class="img-fluid" height="400px">
+            </div>
+        </div>
+    </div>
+    <div id="fourteen_part" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><h2 class="farmi">Implements</h2></div>
+                <div class="col-6 forth"><button class="btn btne"><a href="#">VIEW ALL</a></button></div>
+            </div>
+            <div class="row fourth">
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krishii">
+                        <div class="card-body farming_two">
+                            <span class="badge badge-danger discount-badge">30% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Sprayer---Varsha-Gold.png?crop=center&height=350&v=1677844392&width=350" class="img-fluid" alt="Original Image" ><br>
+                            <br><span class="size">1 unit</span>
+                            <h6>SAMPOORTI SPRAYER</h6>
+                            <span class="form=text text-muted">Sampoorti</span> <br>
+                            <span class="discounted-price"><b>&#8377;3490</b></span> <span class="original-price"><b>&#8377;5000</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krishii">
+                        <div class="card-body farming_two">
+                            <span class="badge badge-danger discount-badge">23% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/FS-230-Brushcutter-with-Autocut-_-2T-Grass-cutting-blade.png?crop=center&height=350&v=1679739694&width=350" class="img-fluid" alt="Original Image" ><br>
+                            <br><h6>STIHL FS 230 BRUSHCUTTER AUTOCUT</h6>
+                            <span class="form=text text-muted">STIHL</span> <br>
+                            <span class="discounted-price"><b>&#8377;16,539.60</b></span> <span class="original-price"><b>&#8377;21,480</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krishii">
+                        <div class="card-body farming_two">
+                            <span class="badge badge-danger discount-badge">20% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/mistblower.jpg?crop=center&height=350&v=1679727989&width=350" class="img-fluid" alt="Original Image" ><br>
+                            <br><span class="size">1 unit</span>
+                            <h6>STIHL SR 420 MIST BLOWER</h6>
+                            <span class="form=text text-muted">STIHL</span> <br>
+                            <span class="discounted-price"><b>&#8377;25,440</b></span> <span class="original-price"><b>&#8377;31,800</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krishii">
+                        <div class="card-body farming_two">
+                            <span class="badge badge-danger discount-badge">20% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/MSA-200-Chainsaw-with-14_-Guide-bar-_-Saw-Chain.png?crop=center&height=350&v=1679728025&width=350" class="img-fluid" alt="Original Image" ><br>
+                            <br><h6>STIHL MSA 200 CHAINSAW</h6>
+                            <span class="form=text text-muted">STIHL</span> <br>
+                            <span class="discounted-price"><b>&#8377;18,498.40</b></span> <span class="original-price"><b>&#8377;23,123</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fifteen_part" class="section">
+        <div class="container">
+            <div class="row third">
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><img src="farm_part11.webp" class="img-fluid" width="260px" height="300px"></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><img src="farm_part7.webp" class="img-fluid" width="260px" height="300px"></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><img src="farm_part8.webp" class="img-fluid" width="260px" height="300px"></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mr-md-5 mb-3"><img src="farm_part12.webp" class="img-fluid" width="260px" height="400px"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sixteen_part" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><h2 class="farmi">Herbicides</h2></div>
+                <div class="col-6 forth"><button class="btn btne"><a href="#">VIEW ALL</a></button></div>
+            </div>
+            <div class="row fourth">
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">38% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Roundup_3.png?crop=center&height=940&v=1676013933&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Roundup_2.png?crop=center&height=940&v=1676013933&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">1 ltr</span>
+                            <h6>ROUNDUP HERBICIDE</h6>
+                            <span class="form=text text-muted">Monsantro</span> <br>
+                            <span class="discounted-price"><b>&#8377;489</b></span> <span class="original-price"><b>&#8377;795</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">25% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Glycel_3.png?crop=center&height=940&v=1676013814&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Glycel_2.png?crop=center&height=940&v=1676013814&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">1 ltr</span>
+                            <h6>GLYCEL HERBICIDE</h6>
+                            <span class="form=text text-muted">Sumitomo</span> <br>
+                            <span class="discounted-price"><b>&#8377;611</b></span> <span class="original-price"><b>&#8377;815</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">40% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Ferio_3.png?crop=center&height=940&v=1676013612&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Ferio_2.png?crop=center&height=940&v=1676013612&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">1 ltr</span>
+                            <h6>FERIO HERBICIDE</h6>
+                            <span class="form=text text-muted">SWAL</span> <br>
+                            <span class="discounted-price"><b>&#8377;779</b></span> <span class="original-price"><b>&#8377;1304</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-md-3 mb-sm-3">
+                    <div class="card discount-card krish">
+                        <div class="card-body farming">
+                            <span class="badge badge-danger discount-badge">32% Off</span>
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Excel-mere71_3_ede7e479-0234-4591-aa86-79922fff35d9.png?crop=center&height=940&v=1676013730&width=940" class="img-fluid" alt="Original Image" >
+                            <img src="https://www.agriplexindia.com/cdn/shop/products/Excel-mere71_2_a7973d32-7303-4618-b649-222bb40d5a5a.png?crop=center&height=940&v=1676013730&width=940" class="hover-image img-fluid" alt="Hover Image" ><br>
+                            <span class="size">100 gm</span>
+                            <h6>MERA 71 HERBICIDE</h6>
+                            <span class="form=text text-muted">Excel Crop Care</span> <br>
+                            <span class="discounted-price"><b>&#8377;129</b></span> <span class="original-price"><b>&#8377;190</b></span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-add-to-cart cartbt"><i class="fa-solid fa-cart-shopping"></i> <i class="fa-solid fa-plus"></i> Cart</button>
+                            <button class="btn btn-buy-now buybt"><i class="fa-solid fa-bag-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="seventeen_part" class="section">
+
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><h2 class="farmi">Brands we sell</h2></div>
+                <div class="col-6 forth"><button class="btn btne"><a href="#">VIEW ALL</a></button></div>
+            </div>
+            <div class="row fourth">
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="card farming_three mb-4 ferm">
+                        <div class="card-body">
+                            <a href="https://sampoorti.in/" target="_blank">
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/Sampoorti.png?pad_color=fff&v=1678781922&width=240" class="img-fluid" alt="image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="card farming_three mb-4 ferm">
+                        <div class="card-body">
+                            <a href="https://www.bayer.com/en/agriculture/products" target="_blank">
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/buyer_6bf85ff7-03a3-4266-9cec-4870f20b3cf3.png?pad_color=fff&v=1678774588&width=240" class="img-fluid" alt="image"></a>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="card farming_three mb-4 ferm">
+                        <div class="card-body">
+                        <a href="https://www.syngenta.com/en" target="_blank">
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/Syngenta_logo.png?pad_color=fff&v=1678781322&width=240" class="img-fluid" alt="image"></a>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="card farming_three mb-4 ferm">
+                        <div class="card-body">
+                            <a href="https://agriculture.basf.com/in/en.html" target="_blank">
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/BASF-Logo.png?pad_color=fff&v=1678774429&width=240" class="img-fluid" alt="image"></a>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="card farming_three mb-4 ferm">
+                        <div class="card-body">
+                            <a href="https://ag.fmc.com/in/en/products" target="_blank">
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/fmc-logo_b5ddebc7-58b5-4a8b-930e-04d1b061a00c.png?pad_color=fff&v=1678780213&width=240" class="img-fluid" alt="image"></a>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="card farming_three mb-4 ferm">
+                        <div class="card-body">
+                            <a href="https://www.stihl.in/en/products/tools-and-machinery" target="_blank">
+                            <img src="https://www.agriplexindia.com/cdn/shop/files/stihl-logo-10_d2ec284a-2c9d-412e-869e-e33338609c81.png?pad_color=fff&v=1678782051&width=240" class="img-fluid" alt="image"></a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="section">
+        <div class="container">
+            <div class="row foot_top">
+                <div class="col-md-4">
+                    <h3 class="farm mb-4">Help</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-angles-right"></i> Contact Us</li>
+                        <li><i class="fa-solid fa-angles-right"></i> FAQs</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Shipping & Delivery Policy</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Payments</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Cancellation & Return</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Terms & Condition</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="farm mb-4">Top Categories</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-angles-right"></i> Seeds</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Insecticides</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Fungicides</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Herbicides</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Bio-Products</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Equipments</li>
+                        <li><i class="fa-solid fa-angles-right"></i> Fertilizers</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="farm mb-4">Quick Links</h2>
+                    <p><span class="color"><b>Landline: <u>080 112 993456</u></b></span></p>
+                    <p><span class="color"><b><i class="fa-solid fa-phone"></i> 7217551106</b></span></p>
+                    <p><span class="color"><b><i class="fa-solid fa-envelope"></i> support@krishifarm.com</b></span></p>
+                    <p><span class="color">ABES Engineering College,Dundhera Road,Ghazizbad</span></p>
+                </div>
+            </div>
+            <div class="row foot_one">
+                <div class="col-6">
+                    <img src="farm_logo.jpeg" clas="img-fluid d-inline" alt="img" height="100px">
+                    <span class="d-inline color"><b>copyright@2024krishiFarm.name</b></span>
+                </div>
+                <div class="col-6 foot">
+                    <i class="fa-brands fa-facebook"></i>  <i class="fa-brands fa-square-twitter"></i>  <i class="fa-brands fa-square-instagram"></i>  <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

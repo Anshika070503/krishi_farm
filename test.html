@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <title>Image Slideshow with Bootstrap</title>
+  <style>
+   .insect img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .insect:hover img {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="col-md-3">
+    <div class="card">
+    <div class="card-body insect">
+        <img src="farm_part2.webp" class="img-fluid" alt="Original Image">
+    <h5>News heading here</h5>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam quisquam officia vel vitae quas eius corrupti quidem repellendus veritatis.</p>
+    </div>
+    </div>
+</body>
+</html>
